@@ -59,9 +59,9 @@ android {
 //    }
 
     //开启viewBinding
-    viewBinding {
-        enabled = true
-    }
+//    viewBinding {
+//        enabled = true
+//    }
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
