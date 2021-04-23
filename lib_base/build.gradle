@@ -8,7 +8,7 @@ android {
     buildToolsVersion "30.0.2"
 
     defaultConfig {
-        minSdkVersion rootProject.ext
+        minSdkVersion rootProject.ext.android.minSdkVersion
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
