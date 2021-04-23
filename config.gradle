@@ -51,8 +51,8 @@ ext {
 
     kotlinx_coroutines_version = "1.4.3"
     kotlinx_coroutines = [
-            "core"   : "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinx_coroutines_version",
-            "android": "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlinx_coroutines_version"
+            "kotlinx-coroutines-core"   : "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinx_coroutines_version",
+            "kotlinx-coroutines-android": "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlinx_coroutines_version"
 
     ]
 
