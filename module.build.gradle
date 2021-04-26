@@ -48,7 +48,7 @@ android {
                 manifest.srcFile 'src/main/AndroidManifest.xml'
                 resources{
                     //正式版本时.剔除debug文件夹下的所有调式文件
-                    exclude 'src/debug/*'
+                    exclude '**/debug/**'
                 }
             }
         }
@@ -59,9 +59,9 @@ android {
 //    }
 
     //开启viewBinding
-//    viewBinding {
-//        enabled = true
-//    }
+    buildFeatures {
+       viewBinding true
+    }
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
