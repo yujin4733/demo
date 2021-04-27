@@ -15,5 +15,7 @@ open class BaseApplication:Application() {
     override fun onCreate() {
         super.onCreate()
         Log.e(TAG, "onCreate: ", )
+        // TODO: 2021/4/27,0027  初始化一些通用的SDK
+
     }
 }

@@ -41,7 +41,7 @@ android {
 //            jniLibs.srcDir = ['libs']
             if (isBuildModule.toBoolean()){
                 //单独运行
-                manifest.srcFile 'src/main/alone/AndroidManifest.xml'
+                manifest.srcFile 'src/main/java/debug/AndroidManifest.xml'
             }
             else {
                 //合并到宿主中
