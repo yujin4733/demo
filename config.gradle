@@ -24,6 +24,7 @@ ext {
 
             // ViewModel
             "lifecycle-viewmodel-ktx"       : "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version",
+            "lifecycle-extensions"       : "androidx.lifecycle:lifecycle-extensions:$lifecycle_version",
             // LiveData
             "lifecycle-livedata-ktx"        : "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version",
             // Lifecycles only (without ViewModel or LiveData)
@@ -58,8 +59,8 @@ ext {
     //依赖第三方配置
     dependencies = [
 
-            "arouter-api"                  : "com.alibaba:arouter-api:1.5.0",
-            "arouter-compiler"             : "com.alibaba:arouter-compiler:1.2.2"
+            "arouter-api"     : "com.alibaba:arouter-api:1.5.0",
+            "arouter-compiler": "com.alibaba:arouter-compiler:1.2.2"
     ]
 
 }

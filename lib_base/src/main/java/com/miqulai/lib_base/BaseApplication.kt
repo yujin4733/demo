@@ -1,21 +1,29 @@
 package com.miqulai.lib_base
 
 import android.app.Application
+import android.content.Context
 import android.util.Log
 
-//1.top-level
-//private const val TAG = "BaseApplication"
 
-open class BaseApplication:Application() {
- // 2   a companion object one of the two options you can apply:
-    companion object{
-          private const val TAG = "BaseApplication"
+open class BaseApplication : Application() {
+
+    companion object {
+        lateinit var context: Context
     }
+
 
     override fun onCreate() {
         super.onCreate()
-        Log.e(TAG, "onCreate: ", )
-        // TODO: 2021/4/27,0027  初始化一些通用的SDK
+        context = applicationContext
+        initialize()
+    }
 
+    protected  open fun initialize() {
+
+    }
+
+    override fun attachBaseContext(base: Context?) {
+        super.attachBaseContext(base)
+//        MultiDex.install(base)
     }
 }
