@@ -9,9 +9,9 @@ import androidx.viewbinding.ViewBinding
 import java.lang.reflect.ParameterizedType
 
 /**
- * Activity基类
+ * MVVM Activity基类
  */
-abstract class BaseFrameActivity<VM : ViewModel, VB : ViewBinding> : AppCompatActivity(),
+abstract class BaseMvvmActivity<VM : ViewModel, VB : ViewBinding> : AppCompatActivity(),
     FrameView<VB> {
 
 
@@ -37,7 +37,8 @@ abstract class BaseFrameActivity<VM : ViewModel, VB : ViewBinding> : AppCompatAc
         super.onCreate(savedInstanceState)
         setContentView(mBinding.root)
 
-
+        mBinding.initView()
+        initData()
     }
 
 }

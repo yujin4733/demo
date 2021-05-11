@@ -53,5 +53,5 @@ dependencies {
     androidTestImplementation rootProject.ext.androidx["espresso-core"]
 
     api rootProject.ext.androidx["lifecycle-viewmodel-ktx"]
-    api rootProject.ext.androidx["lifecycle-extensions"]
+//    api rootProject.ext.androidx["lifecycle-extensions"]
 }

@@ -18,10 +18,10 @@ interface FrameView<VB : ViewBinding> {
     /**
      * 初始化LiveData的订阅关系
      */
-    fun initLiveDataObserve()
+//    fun initLiveDataObserve()
 
     /**
      * 初始化界面创建时的数据请求
      */
-    fun initRequestData()
+    fun initData()
 }
