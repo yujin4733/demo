@@ -47,11 +47,17 @@ dependencies {
     api rootProject.ext.androidx["appcompat"]
     api rootProject.ext.androidx["material"]
     api rootProject.ext.androidx["constraintlayout"]
+    api rootProject.ext.androidx["lifecycle-viewmodel-ktx"]
+    api rootProject.ext.androidx["fragment.ktx"]
+    api rootProject.ext.androidx["navigation-fragment-ktx"]
+    api rootProject.ext.androidx["navigation-ui-ktx"]
+//    "recyclerview"                  : "androidx.recyclerview:recyclerview:1.1.0",
+//    "cardview"                      : "androidx.cardview:cardview:1.0.0",
+
 
     testImplementation rootProject.ext.androidx["junit"]
     androidTestImplementation rootProject.ext.androidx["ext-junit"]
     androidTestImplementation rootProject.ext.androidx["espresso-core"]
 
-    api rootProject.ext.androidx["lifecycle-viewmodel-ktx"]
 //    api rootProject.ext.androidx["lifecycle-extensions"]
 }

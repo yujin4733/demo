@@ -65,6 +65,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+//    implementation project(path: ':lib_navigationview')
     testImplementation rootProject.ext.androidx["junit"]
     androidTestImplementation rootProject.ext.androidx["ext-junit"]
     androidTestImplementation rootProject.ext.androidx["espresso-core"]
