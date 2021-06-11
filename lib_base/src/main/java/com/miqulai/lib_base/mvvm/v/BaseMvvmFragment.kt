@@ -2,28 +2,26 @@ package com.miqulai.lib_base.mvvm.v
 
 import android.os.Bundle
 import android.view.LayoutInflater
-import androidx.appcompat.app.AppCompatActivity
+import android.view.View
+import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.viewbinding.ViewBinding
 import java.lang.reflect.ParameterizedType
 
 /**
- * MVVM Activity基类
+ * @ClassName:      BaseMvvmFragment
+ * @Author:         yujin
+ * @CreateDate:     2021/5/10,0010 14:26
+ * @Description:   MVVM  Fragment基类
  */
-abstract class BaseMvvmActivity<VM : ViewModel, VB : ViewBinding> : AppCompatActivity(),
-    FrameView<VB> {
+abstract class BaseMvvmFragment<VB : ViewBinding, VM : ViewModel> : Fragment(), FrameView<VB> {
 
-
-    /**
-     * 属性委托 by lazy 第一次使用时才初始化对象
-     * 初始化将总是发生在与属性使用位于相同的线程，使用LazyThreadSafetyMode.NONE减少开销，
-     * lazy 默认为线程安全模式LazyThreadSafetyMode.SYNCHRONIZED，
-     */
     protected val mBinding: VB by lazy(mode = LazyThreadSafetyMode.NONE) {
         val vbClass: Class<VB> =
             (javaClass.genericSuperclass as ParameterizedType).actualTypeArguments[0] as Class<VB>
-        val inflate = vbClass.getMethod("inflate", LayoutInflater::class.java)
+        val inflate = vbClass.getDeclaredMethod("inflate", LayoutInflater::class.java)
         inflate.invoke(null, layoutInflater) as VB
     }
 
@@ -33,9 +31,19 @@ abstract class BaseMvvmActivity<VM : ViewModel, VB : ViewBinding> : AppCompatAct
         ViewModelProvider(this).get(vmClass)
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(mBinding.root)
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        return mBinding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        // ARouter 依赖注入
+//        ARouter.getInstance().inject(this)
 
         mBinding.initView()
         initData()

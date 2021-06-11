@@ -1,17 +1,16 @@
 apply from: "../module.build.gradle"
-apply plugin: 'kotlin-android'
 android {
 
     defaultConfig {
         if(isBuildModule.toBoolean()){
-            applicationId "com.miqulai.module_home"
+            applicationId "com.miqulai.main"
         }
         versionCode 1
         versionName "1.0"
     }
     //统一资源前缀，规范资源引用
     //这个值只能限定xml里面的资源，并不能限定图片资源，所有图片资源仍然需要注意修改资源名
-    resourcePrefix "module_home_"
+    resourcePrefix "module_main_"
 
 }
 
@@ -19,6 +18,5 @@ dependencies {
 
     api project(path: ':lib_common')
     implementation project(':lib_nav')
-
 
 }
