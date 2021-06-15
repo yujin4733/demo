@@ -4,7 +4,6 @@ import android.graphics.Color
 import androidx.fragment.app.Fragment
 import com.miqulai.bottomnav.SpaceItem
 import com.miqulai.bottomnav.SpaceOnClickListener
-import com.miqulai.lib_base.ext.showHideFragment
 import com.miqulai.main.databinding.ModuleMainActivityMainBinding
 import com.yj.demo.base.BaseViewBindingActivity
 

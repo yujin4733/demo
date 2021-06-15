@@ -11,11 +11,6 @@
         android:theme="@style/Theme.Demo"
         >
         <activity android:name="com.miqulai.module_home.MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 
