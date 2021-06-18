@@ -10,8 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Demo"
         >
-        <activity android:name="com.miqulai.module_home.MainActivity">
-        </activity>
+
     </application>
 
 </manifest>

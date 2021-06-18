@@ -2,10 +2,9 @@ package com.miqulai.lib_base
 
 import android.app.Application
 import android.content.Context
-import android.util.Log
 
 
-open class BaseApplication : Application() {
+abstract class BaseApplication : Application() {
 
     companion object {
         lateinit var context: Context
@@ -18,8 +17,6 @@ open class BaseApplication : Application() {
         initialize()
     }
 
-    protected  open fun initialize() {
-
-    }
+    abstract fun initialize()
 
 }

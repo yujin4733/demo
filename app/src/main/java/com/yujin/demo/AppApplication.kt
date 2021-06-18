@@ -1,9 +1,10 @@
 package com.yujin.demo
 
+import com.miqulai.common.CommonApplication
 import com.miqulai.lib_base.BaseApplication
 
 
-class AppApplication:BaseApplication() {
+class AppApplication: CommonApplication(){
 
     override fun onCreate() {
         super.onCreate()

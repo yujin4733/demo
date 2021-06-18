@@ -22,9 +22,9 @@ class BadgeHelper {
 
         Utils.changeViewVisibilityVisible(view);
         TextView badgeTextView = (TextView) view.findViewById(R.id.badge_text_view);
-        if (shouldShowBadgeWithNinePlus){
+        if (shouldShowBadgeWithNinePlus) {
             badgeTextView.setText(badgeItem.getBadgeText());
-        } else{
+        } else {
             badgeTextView.setText(badgeItem.getFullBadgeText());
         }
 
@@ -71,16 +71,11 @@ class BadgeHelper {
      */
     static void forceShowBadge(RelativeLayout view, BadgeItem badgeItem, boolean shouldShowBadgeWithNinePlus) {
         Utils.changeViewVisibilityVisible(view);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-            view.setBackground(makeShapeDrawable(badgeItem.getBadgeColor()));
-        } else {
-            view.setBackgroundDrawable(makeShapeDrawable(badgeItem.getBadgeColor()));
-        }
+        view.setBackground(makeShapeDrawable(badgeItem.getBadgeColor()));
         TextView badgeTextView = (TextView) view.findViewById(R.id.badge_text_view);
-        if (shouldShowBadgeWithNinePlus){
+        if (shouldShowBadgeWithNinePlus) {
             badgeTextView.setText(badgeItem.getBadgeText());
-        }
-        else{
+        } else {
             badgeTextView.setText(badgeItem.getFullBadgeText());
         }
     }

@@ -43,8 +43,4 @@ abstract class BaseViewBindingFragment<T : ViewBinding> : Fragment() {
         return binding.root
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
 }

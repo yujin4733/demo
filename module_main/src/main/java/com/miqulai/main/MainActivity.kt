@@ -2,11 +2,16 @@ package com.miqulai.main
 
 import android.graphics.Color
 import androidx.fragment.app.Fragment
+import com.alibaba.android.arouter.facade.annotation.Route
 import com.miqulai.bottomnav.SpaceItem
 import com.miqulai.bottomnav.SpaceOnClickListener
+import com.miqulai.common.ext.loadFragments
+import com.miqulai.common.route.RouterPath
 import com.miqulai.main.databinding.ModuleMainActivityMainBinding
+import com.miqulai.main.fragment.generateFragments
 import com.yj.demo.base.BaseViewBindingActivity
 
+@Route(path = RouterPath.Main.A_MAIN)
 class MainActivity : BaseViewBindingActivity<ModuleMainActivityMainBinding>() {
 
     private lateinit var fragmentsMap: Map<Int, Fragment>
@@ -31,7 +36,6 @@ class MainActivity : BaseViewBindingActivity<ModuleMainActivityMainBinding>() {
 //                showToast("onCentreButtonClick")
             }
 
-
             override fun onItemClick(itemIndex: Int, itemName: String) {
 //                showHideFragment(fragmentsMap.getValue(itemIndex))
             }
@@ -49,9 +53,8 @@ class MainActivity : BaseViewBindingActivity<ModuleMainActivityMainBinding>() {
 //            }
 //
 //        })
-        /*fragmentsMap = generateFragments()
-        loadFragments(R.id.fcvContainer,0,*fragmentsMap.values.toTypedArray())  */
+        fragmentsMap = generateFragments()
+        loadFragments(R.id.fcvContainer,0,*fragmentsMap.values.toTypedArray())
     }
-
 
 }

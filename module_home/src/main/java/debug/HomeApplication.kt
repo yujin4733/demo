@@ -8,4 +8,8 @@ class HomeApplication:BaseApplication() {
         // TODO: 2021/4/27,0027 仅初始化本Module所需的SDK
 
     }
+
+    override fun initialize() {
+        TODO("Not yet implemented")
+    }
 }

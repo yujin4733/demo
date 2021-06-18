@@ -16,7 +16,10 @@ android {
 
 dependencies {
 
-    api project(path: ':lib_common')
+//    api project(path: ':lib_common')
+    api project(':lib_common')
     implementation project(':lib_nav')
+//    implementation project(':module_home')
+//    kapt rootProject.ext.dependencies["arouter-compiler"]
 
 }
