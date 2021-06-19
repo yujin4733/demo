@@ -6,6 +6,7 @@ import com.alibaba.android.arouter.facade.annotation.Route
 import com.miqulai.bottomnav.SpaceItem
 import com.miqulai.bottomnav.SpaceOnClickListener
 import com.miqulai.common.ext.loadFragments
+import com.miqulai.common.ext.showHideFragment
 import com.miqulai.common.route.RouterPath
 import com.miqulai.main.databinding.ModuleMainActivityMainBinding
 import com.miqulai.main.fragment.generateFragments
@@ -37,7 +38,7 @@ class MainActivity : BaseViewBindingActivity<ModuleMainActivityMainBinding>() {
             }
 
             override fun onItemClick(itemIndex: Int, itemName: String) {
-//                showHideFragment(fragmentsMap.getValue(itemIndex))
+                showHideFragment(fragmentsMap.getValue(itemIndex))
             }
 
             override fun onItemReselected(itemIndex: Int, itemName: String) {}

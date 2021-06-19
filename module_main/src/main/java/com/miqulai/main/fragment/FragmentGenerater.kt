@@ -20,10 +20,9 @@ const val MINE_FRAGMENT = 3
  */
 fun generateFragments() = mapOf<Int, Fragment>(
     HOME_FRAGMENT to Router.navigate(RouterPath.Home.F_HOME) as Fragment,
+    MESSAGE_FRAGMENT to Router.navigate(RouterPath.Mine.F_MINE) as Fragment,
+    DYNAMIC_FRAGMENT to Router.navigate(RouterPath.Home.F_HOME) as Fragment,
     MINE_FRAGMENT to Router.navigate(RouterPath.Mine.F_MINE) as Fragment
-
-//    MESSAGE_FRAGMENT to Router.navigate(RouterPath.Mine.F_MINE) as Fragment,
-//    DYNAMIC_FRAGMENT to Router.navigate(RouterPath.Home.F_HOME) as Fragment,
 //    HOME_FRAGMENT to  Router.navigate(RouterPath.Home.F_HOME) as Fragment,
 //    MESSAGE_FRAGMENT to  Router.navigate(RouterPath.Message.F_MESSAGE) as Fragment,
 //    DYNAMIC_FRAGMENT to  Router.navigate(RouterPath.Dynamic.F_DYNAMIC) as Fragment,

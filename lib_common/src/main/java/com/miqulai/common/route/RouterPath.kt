@@ -14,25 +14,26 @@ class RouterPath {
         const val F_MESSAGE = "/main/HomeFragment"
         const val F_QR_SCAN = "/main/QRScanFragment"
     }
-
     object Home {
         const val F_HOME = "/home/HomeFragment"
-
     }
+
+
     object Message {
         const val F_MESSAGE = "/message/MessageFragment"
-
     }
+
 
     object Dynamic {
         const val F_DYNAMIC = "/dynamic/DynamicFragment"
-
     }
+
 
     object Mine {
-
         const val F_MINE = "/mine/MineFragment"
     }
+
+
 
     object Web {
         const val F_WEB = "/web/WebFragment"

@@ -21,10 +21,10 @@ android {
         versionCode rootProject.ext.android.versionCode
         versionName rootProject.ext.android.versionName
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        ndk {
-            //设置支持的SO库架构
-            abiFilters 'arm64-v8a', 'armeabi-v7a'
-        }
+//        ndk {
+//            //设置支持的SO库架构
+//            abiFilters 'arm64-v8a', 'armeabi-v7a'
+//        }
 
     }
     buildTypes {
@@ -85,7 +85,7 @@ dependencies {
 //        //动态模块
 //        implementation project(':module-community')
 //        //我模块
-//        implementation project(':module-more')
+        implementation project(':module_mine')
 //        //视频播放模块
 //        implementation project(':module-player')
 //        //用户模块
